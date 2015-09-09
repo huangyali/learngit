@@ -14,3 +14,8 @@ git reset —-hard HEAD^  返回上一个版本 HEAD^^返回上上一个版本  —-hard 中间不能
 cat read.txt  查看文件的内容
 git reset —-hard 1a036  返回该版本号 1a036为commit id即版本号
 git reflog 查看命令历史，可以记录每一次提交的命令，上面有版本号id
+git checkout —- file.txt 撤销到最近的状态（暂存区或版本库） “—-”不能丢掉
+
+如果已经add到暂存区，可以使用这个命令把暂存区的修改退回到工作区
+git reset HEAD file.txt 把暂存区退回工作区
+git checkout —- file.txt 撤销到最近的一次修改，之前add那一个版本就没有了
