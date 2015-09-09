@@ -1,4 +1,7 @@
 git is a version control system,is free software,i am stadying.
+分布式版本系统的是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，
+而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！
+
 
 安装git,命令创建用户邮件地址，生成git仓库地址
 在仓库下所有文件都会被git检索到
@@ -23,3 +26,14 @@ git checkout —- file.txt 撤销到最近的一次修改，之前add那一个版本就没有了
 删除文件
 git rm file.txt 删除文件， git commit提交后版本库也会删除
 如果版本库中还有这个文件，通过git checkout —- file.txt 可以从版本库中恢复到工作区
+
+使用GitHub仓库，在官网上添加一个ssh key,往仓库推送东西，需要这个key，不同的电脑使用一个github仓库可以分别在电脑上注册key 
+创建key命令，ssh-keygen -t rsa -C “youremail@example.com”
+
+切入本地learngit仓库，把本地仓库与远程github中的origin仓库相连接
+git remote add origin https://github.com/huangyali/learngit.git
+git push origin master
+
+从现在起，只要本地作了提交，就可以通过命令：
+$ git push origin master一次推送master分支的所有内容
+
