@@ -37,3 +37,12 @@ git push origin master
 从现在起，只要本地作了提交，就可以通过命令：
 $ git push origin master一次推送master分支的所有内容
 
+从github仓库中克隆到本地一个仓库
+先切入自己本地learngit仓库
+$ git clone git@github.com:huangyali/learngit.git
+这样本地就会把github上learngit仓库下所有内容克隆在本地
+
+git创建修改文件，无论文件是一个还是一万个，速度非常快，一秒钟完成，比其他版本控制系统快
+
+git创建另一个分支dev，在dev上做修改，再把dev上修改的内容提交到master上
+
