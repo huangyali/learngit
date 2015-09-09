@@ -19,3 +19,7 @@ git checkout —- file.txt 撤销到最近的状态（暂存区或版本库） “—-”不能丢掉
 如果已经add到暂存区，可以使用这个命令把暂存区的修改退回到工作区
 git reset HEAD file.txt 把暂存区退回工作区
 git checkout —- file.txt 撤销到最近的一次修改，之前add那一个版本就没有了
+
+删除文件
+git rm file.txt 删除文件， git commit提交后版本库也会删除
+如果版本库中还有这个文件，通过git checkout —- file.txt 可以从版本库中恢复到工作区
