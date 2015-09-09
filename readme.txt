@@ -45,4 +45,10 @@ $ git clone git@github.com:huangyali/learngit.git
 git创建修改文件，无论文件是一个还是一万个，速度非常快，一秒钟完成，比其他版本控制系统快
 
 git创建另一个分支dev，在dev上做修改，再把dev上修改的内容提交到master上
+git branch           查看所有分支，带*号的为当前分支
+git branch name      创建分支 name为分支名字
+git checkout name    切换分支
+git checkout -b name 创建并切换分支
+git merge name       合并某（name）分支到当前分支，因为先切换到你要合并到的分支上
+git branch -d name   删除分支
 
