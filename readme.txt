@@ -52,3 +52,7 @@ git checkout -b name 创建并切换分支
 git merge name       合并某（name）分支到当前分支，因为先切换到你要合并到的分支上
 git branch -d name   删除分支
 
+git stash 保存当前工作内容 （不用提交，切换到其他分支，该内容不会丢失）
+git stash apply 恢复刚才stash保存的内容,不会删除
+git stash pop  恢复并删除stash内容
+
