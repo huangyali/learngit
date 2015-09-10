@@ -2,25 +2,24 @@ git is a version control system,is free software,i am stadying.
 分布式版本系统的是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，
 而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！
 
-
 安装git,命令创建用户邮件地址，生成git仓库地址
 在仓库下所有文件都会被git检索到
 
 命令：
 cd learngit
-git add  file.txt   往仓库添加文件
-git commit -m”记录说明”  提交文件
-git status 查看当前的状态
-git diff 查看修改了什么不同的different内容
-git log  查看提交的历史版本号及说明
-git reset —-hard HEAD^  返回上一个版本 HEAD^^返回上上一个版本  —-hard 中间不能有空格
-cat read.txt  查看文件的内容
-git reset —-hard 1a036  返回该版本号 1a036为commit id即版本号
-git reflog 查看命令历史，可以记录每一次提交的命令，上面有版本号id
+git add  file.txt        往仓库添加文件
+git commit -m”记录说明”    提交文件
+git status               查看当前的状态
+git diff                 查看修改了什么不同的different内容
+git log                  查看提交的历史版本号及说明
+git reset —-hard HEAD^   返回上一个版本 HEAD^^返回上上一个版本  —-hard 中间不能有空格
+cat read.txt             查看文件的内容
+git reset —-hard 1a036   返回该版本号 1a036为commit id即版本号
+git reflog               查看命令历史，可以记录每一次提交的命令，上面有版本号id
 git checkout —- file.txt 撤销到最近的状态（暂存区或版本库） “—-”不能丢掉
 
 如果已经add到暂存区，可以使用这个命令把暂存区的修改退回到工作区
-git reset HEAD file.txt 把暂存区退回工作区
+git reset HEAD file.txt  把暂存区退回工作区
 git checkout —- file.txt 撤销到最近的一次修改，之前add那一个版本就没有了
 
 删除文件
@@ -51,8 +50,20 @@ git checkout name    切换分支
 git checkout -b name 创建并切换分支
 git merge name       合并某（name）分支到当前分支，因为先切换到你要合并到的分支上
 git branch -d name   删除分支
+git branch -D name   强制删除分支
 
-git stash 保存当前工作内容 （不用提交，切换到其他分支，该内容不会丢失）
-git stash apply 恢复刚才stash保存的内容,不会删除
-git stash pop  恢复并删除stash内容
+git stash            保存当前工作内容 （不用提交，切换到其他分支，该内容不会丢失）
+git stash apply      恢复刚才stash保存的内容,不会删除
+git stash pop        恢复并删除stash内容
+
+git config —-global user.name “huangyali”
+git config —-global user.email “yalihuang214@163.com”
+git remote     查看远程库的信息
+git remote -v  显示远程库抓取和推送的origin地址
+
+多人都在远程库上克隆主分支 master，开发在新建分支dev上
+如果两人都分别在dev分支上修改同一个文件，一个人push成功，另一个人就得先抓取pull下来，再push推送
+git pull 从远程库上抓取该文件内容，就是svn的更新
+git branch —-set-upstream dev origin/dev  pull有可能失败，要设置本地dev分支和远程origin/dev分支的链接，再git pull,pull成功，合并有冲突，手动解决，再push上去
+
 
