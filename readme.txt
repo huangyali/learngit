@@ -1,6 +1,7 @@
 git is a version control system,is free software,i am stadying.
 分布式版本系统的是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，
 而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！
+git教程：http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
 
 安装git,命令创建用户邮件地址，生成git仓库地址
 在仓库下所有文件都会被git检索到
@@ -66,4 +67,6 @@ git remote -v  显示远程库抓取和推送的origin地址
 git pull 从远程库上抓取该文件内容，就是svn的更新
 git branch —-set-upstream dev origin/dev  pull有可能失败，要设置本地dev分支和远程origin/dev分支的链接，再git pull,pull成功，合并有冲突，手动解决，再push上去
 
-
+git tag name 新建一个标签
+git tag -a tagname -m “标签信息”
+git tag     查看所有标签
